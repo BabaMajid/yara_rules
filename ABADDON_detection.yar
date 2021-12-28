@@ -1,6 +1,6 @@
 import "pe"
 
-rule ABADDON_detection rule
+rule ABADDON_detection
 {
 meta:
 	author = "Majid Jahangeer"
