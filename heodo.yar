@@ -14,6 +14,6 @@ $reg2="Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Network" nocase a
 $reg3="Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Comdlg32" nocase ascii
 
 condition:
-(1 of ($s*)) and (1 of ($reg*)) or (pe.imports("ole32.dll","OleFlushClipboard") and pe.imports("user32.dll","GetClipboardData") and uint16(0)==0x5A4D)
+(all of ($s*)) and (1 of ($reg*)) or (pe.imports("ole32.dll","OleFlushClipboard") and pe.imports("user32.dll","GetClipboardData") and uint16(0)==0x5A4D)
 
 }
