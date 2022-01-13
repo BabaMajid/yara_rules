@@ -16,10 +16,8 @@ $p1="system32" nocase
 $p2="syswow64" nocase
 $h1 = {D0 CF 11 E0}
 $h2 = {50 4B 03 04}
-$text1="click Enable Content" nocase ascii
-$text2="click Enable Editing" nocase ascii
 
 condition:
-1 of ($s*) and (1 of ($p*) or 1 of ($text*)) and ($h1 in (0..4) or $h2 in (0..4))
+1 of ($s*) and (1 of ($p*)) and ($h1 in (0..4) or $h2 in (0..4))
 
 }
